@@ -16,6 +16,7 @@ void clean_up_mess ()
 
 void calculate ()
 {
+  Token_stream ts;
   while (true)
   try
   {
@@ -33,6 +34,7 @@ void calculate ()
     cerr << e.what() << endl;
     clean_up_mess();
   }
+
 }
 
 

@@ -3,7 +3,7 @@
 #include "grammar.h"
 #include "variable.h"
 
-double expression ()
+double expression (Token_stream& ts)
 {
   double left = term();
 
@@ -28,7 +28,7 @@ double expression ()
   }
 }
 
-double term ()
+double term (Token_stream& ts)
 {
   double left = primary();
 
@@ -59,7 +59,7 @@ double term ()
 
 
 
-double primary ()
+double primary (Token_stream& ts)
 {
   Token t = ts.get();
   switch (t.kind)

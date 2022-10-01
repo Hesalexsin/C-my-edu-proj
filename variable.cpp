@@ -28,7 +28,7 @@ void set_value (string s, double d)
   error("set: undefined name ", s);
 }
 
-double declaration ()
+double declaration (Token_stream& ts)
 {
   Token t = ts.get();
   if (t.kind != name)
@@ -46,7 +46,7 @@ double declaration ()
 }
 
 
-double statement ()
+double statement (Token_stream& ts)
 {
   Token t = ts.get();
   switch (t.kind)
