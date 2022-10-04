@@ -2,7 +2,11 @@ import qbs
 
 CppApplication {
     consoleApplication: true
-    files: "main.cpp"
+    files: [
+        "main.cpp",
+        "vec2d.cpp",
+        "vec2d.h",
+    ]
 
     Group {     // Properties for the produced executable
         fileTagsFilter: "application"
